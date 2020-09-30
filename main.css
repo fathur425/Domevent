@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Special+Elite&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: auto;
+    min-height: 100 vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: azure;
+    font-family: 'Special Elite', cursive;    
+}
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10%;
+    background-color: darkslategrey;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.brand{
+    color: whitesmoke;
+    font-family: 'Archivo Black', sans-serif;
+}
+.material-icons{
+    color: whitesmoke;
+     
+}  
+.menuIcon{
+    margin-left: auto;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.modalMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.500);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: xx-large;
+    z-index: 200;
+}
+.closeIcon{
+    color: red;
+    font-size: 2rem;
+    position: absolute;
+    top: 15vh;
+    right: 10%;
+}
+.closeIcon:hover{
+    color: black;
+    cursor: pointer;
+}
+.modalMenu a{
+    text-decoration: none;
+    color:black;
+    font-size: 2rem;
+}
+.modalMenu a:hover{
+    color: moccasin;
+    font-size: 2.3rem;
+}
+.container{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;  
+}
+.container section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home {
+    background-size: cover;
+    background-image: url(https://picsum.photos/seed/17/900);
+    background-attachment: fixed;
+    gap: 100px;
+}
+.homeImage{
+    width: 350px;
+    height: 350px;  
+    object-fit: cover;
+    object-position: right;
+    border-radius: 50px 50px 20px 20px;
+    border: 10px solid cornflowerblue;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+}
+.homeText{
+    font-size: 8rem;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
+    animation-iteration-count: 6;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.about {
+    background-size: cover;
+    background-image: url(https://picsum.photos/seed/90/900);
+    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start !important;
+}
+.contact {
+    background-size: cover;
+    background-image: url(https://picsum.photos/seed/300/900);
+    background-attachment: fixed;
+    
+}
+.showcase {
+    background-size: cover;
+    background-image: url(https://picsum.photos/seed/200/900);
+    background-attachment: fixed;
+    
+}
+.rotateIcon{
+    font-size: 6rem;
+    color: navy;
+    animation-name: rotate;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.alertAbout{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    color: darkorange;
+    position: sticky;
+    top: 10vh;
+}
+@keyframes bottomToTop{
+    from {
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
