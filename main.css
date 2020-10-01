@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 10%;
+    padding: 0 40px;
     background-color: darkslategrey;
     position: sticky;
     top: 0;
@@ -70,7 +70,7 @@ body {
 }
 .modalMenu a{
     text-decoration: none;
-    color:black;
+    color: snow;
     font-size: 2rem;
 }
 .modalMenu a:hover{
@@ -90,6 +90,8 @@ body {
     align-items: center;
 }
 .home {
+    flex-direction: column;
+    justify-content: flex-start;
     background-size: cover;
     background-image: url(https://picsum.photos/seed/17/900);
     background-attachment: fixed;
@@ -107,22 +109,58 @@ body {
     animation-iteration-count: 4;
 }
 .homeText{
-    font-size: 8rem;
-    animation-name: bottomToTop;
+    font-size: 3rem;
+    animation-name : bottomToTop;
     animation-duration: 2s;
     animation-iteration-count: 6;
     animation-delay: 1s;
     opacity: 0;
     animation-fill-mode: forwards;
 }
-.about {
-    background-size: cover;
-    background-image: url(https://picsum.photos/seed/90/900);
-    background-attachment: fixed;
-    flex-direction: column;
-    justify-content: flex-start !important;
+.homeContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    height: 100%;
 }
-.contact {
+.about{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4"
+    ;
+}
+.box{
+   width: 100%;
+   height: 100%;
+   padding: 40px;
+}
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/47/600);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 200px 0 ;
+}
+.about_box2{
+    grid-template: box2;
+}
+.about_box3{
+    grid-template: box3;
+}
+.about_box4{
+    grid-template: box4;
+    background-image: url(https://picsum.photos/seed/178/600);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 200px 0 0 0;
+}
+.contact{
     background-size: cover;
     background-image: url(https://picsum.photos/seed/300/900);
     background-attachment: fixed;
@@ -152,6 +190,9 @@ body {
     color: darkorange;
     position: sticky;
     top: 10vh;
+    z-index: 80;
+    margin-bottom: auto;
+    font-size: 25px;
 }
 @keyframes bottomToTop{
     from {
